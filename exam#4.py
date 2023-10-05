@@ -11,7 +11,6 @@ def consensus_string(strings):
         max_count = 0
         max_char = ''
 
-        # Находим символ с максимальной частотой
         for char, count in char_count.items():
             if count > max_count or (count == max_count and char < max_char):
                 max_count = count
@@ -21,6 +20,7 @@ def consensus_string(strings):
 
     consensus_string = ''.join(consensus)
     return consensus_string
+
 
 strings = ["ATTA", "ACTA", "AGCA", "ACAA"]
 result = consensus_string(strings)
